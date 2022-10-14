@@ -6,7 +6,7 @@ const Book = (props) => {
 
     
 
-    const { image, title, author,discription} = props.books
+    const { image, title, author} = props.books
     return (
         <div className="col p-0">
 
