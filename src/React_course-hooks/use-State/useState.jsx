@@ -62,7 +62,7 @@ const UseStateBasics = () => {
 
     return (
         <div>
-            <h1 className='text-danger'>useState</h1>
+            <h1 className='text-danger'> ../useState</h1>
             <h1 className='text-start'>/ change Title</h1>
             <h2 className='m-3'>{title}</h2>
             <button className='btn btn-primary m-sm-3' onClick={handleClick}>Change Title</button>
@@ -73,7 +73,7 @@ const UseStateBasics = () => {
                 {lsP}
             </div>
             <hr />
-            <h1 className='text-start'>/object modification</h1>
+            <h1 className='text-start'>/ object modification</h1>
             <h2>Name : {persone.name} , age: {persone.age}</h2>
             <p className='fs-4'><q>{persone.message}</q></p>
             <div className="row w-100 align-items-center justify-content-center">

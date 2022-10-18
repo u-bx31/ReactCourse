@@ -7,9 +7,9 @@ import Setup from './React_course-hooks/use-State/useState';
 function App() {
   const body = document.body;
 
-  body.style.backgroundColor = "rgb(214, 238, 240)";
+  body.style.backgroundColor = "rgb(147 147 147);";
   return (
-    <div className='container p-4 text-center'>
+    <div className='container p-4 text-center bg-white'>
       <Setup />
     </div>
   );
