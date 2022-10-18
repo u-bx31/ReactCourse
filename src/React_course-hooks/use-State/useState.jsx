@@ -51,7 +51,7 @@ const UseStateBasics = () => {
 
     // Get all the data from list Data and show them on grid
     const lsP = people.map((c) => {
-        return (<div className='col bg-white gap rounded-2 w-75 p-2' key={c.id}>
+        return (<div className='col bg-light gap rounded-2 w-75 p-2' key={c.id}>
             <div className="row p-2">
                 <div className="col"><h4>{c.name}</h4></div>
                 <div className="col"><button className="btn btn-outline-danger" onClick={() => RemoveItem(c.id)}>Remove</button></div>
@@ -66,13 +66,14 @@ const UseStateBasics = () => {
             <h1 className='text-start'>/ change Title</h1>
             <h2 className='m-3'>{title}</h2>
             <button className='btn btn-primary m-sm-3' onClick={handleClick}>Change Title</button>
-
             <hr />
+
             <h1 className='text-start'>/ array 'show && remove'</h1>
             <div className='row row-cols-2 gap-3 justify-content-center w-100 '>
                 {lsP}
             </div>
             <hr />
+
             <h1 className='text-start'>/ object modification</h1>
             <h2>Name : {persone.name} , age: {persone.age}</h2>
             <p className='fs-4'><q>{persone.message}</q></p>
@@ -80,13 +81,14 @@ const UseStateBasics = () => {
                 <div className="col-sm-4">
                     <div class="mb-3">
                         <p for="messageText" class="form-label text-start">Message :</p>
-                        <textarea class="form-control" id="messageText" rows="3"></textarea>
+                        <textarea class="form-control bg-light" id="messageText" rows="3"></textarea>
                     </div>
                 </div>
                 <div className="col-sm-2 ">
                     <button className='btn btn-primary m-sm-3 ' onClick={ChangeMessage}>Change Message</button>
                 </div>
             </div>
+
             <hr/>
 
         </div>
