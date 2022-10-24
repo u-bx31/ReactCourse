@@ -57,6 +57,7 @@ const UseEffectBasics = () => {
 
     useEffect(() => {
         getUsers();
+        document.title = "useEffect"
     }, [])
     const usersList = users.map((user) => {
         const { login, id, node_id, avatar_url, html_url } = user

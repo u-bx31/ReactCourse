@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Array
 const data = [
@@ -59,6 +59,11 @@ const UseStateBasics = () => {
         </div>)
     })
 
+    //changeTitle
+    useEffect(()=>{
+        document.title = "useState"
+        
+    },[])
 
     return (
         <div>
