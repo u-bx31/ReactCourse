@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Roboto+Mono:ital,wght@0,500;1,400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +6,33 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "arial", heletica, sans-serif;
+  font-size: 12px;
+  background: #2980b9 url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png") repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
 }
 
+@-webkit-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
 .card {
   position: relative;
   display: block;
@@ -103,4 +126,37 @@ body {
 
 .c_img1 {
   width: 50px;
+}
+
+.c-img {
+  width: 7rem;
+  height: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 150px;
+}
+
+.c-card {
+  box-shadow: rgba(97, 97, 185, 0.2) 0px 7px 29px 0px;
+}
+
+.c-cont {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.c-cont p {
+  font-family: "Roboto Mono", monospace;
+}
+.c-cont h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.c-cont h2 {
+  font-family: "Fasthand", cursive;
+}
+
+@media only screen and (max-width: 375px) {
+  .c-img {
+    width: 6rem;
+    height: 6rem;
+  }
 }/*# sourceMappingURL=style.css.map */
