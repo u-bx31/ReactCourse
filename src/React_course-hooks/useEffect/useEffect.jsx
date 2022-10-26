@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useFetch } from '../customHook/useFetch';
 
 
 const UseEffectBasics = () => {
@@ -34,31 +35,42 @@ const UseEffectBasics = () => {
     //useEffect in fetchData
     const url = 'https://api.github.com/users'
     const [users, setUsers] = useState([]);
-    const [isLoading, setIsloading] = useState(true);
 
-    const getUsers = async () => {
-        try {
-            const response = await fetch(url);
-            console.log(response.status)
-            const users = await response.json();
-            setUsers(users)
-            setTimeout(() => {
-                setIsloading(false)
+    // const [loading, setLoading] = useState(true);
+    // const getUsers = async () => {
+    //     try {
+    //         const response = await fetch(url);
+    //         console.log(response.status)
+    //         const users = await response.json();
+    //         setUsers(users)
+    //         setTimeout(() => {
+    //             setLoading(false)
+    //         }, 3000);
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
 
-            }, 3000);
-            
-        } catch (error) {
-            console.log(error)
-            
-        }
-
-
+    //-----------using custom Hook---------------
+    
+    const {loading,data} = useFetch(url)
+    const getUsers = ()=>{
+        setUsers(data)
     }
+    //normal effect
+    // useEffect(() => {  
+    //     getUsers();
+    //     document.title = "useEffect"
+    // },[])
 
-    useEffect(() => {
+    //--for Custom Hook
+    useEffect(() => {  
         getUsers();
         document.title = "useEffect"
-    }, [])
+    })
+
+
+
     const usersList = users.map((user) => {
         const { login, id, node_id, avatar_url, html_url } = user
         return (
@@ -68,7 +80,7 @@ const UseEffectBasics = () => {
                     <div className="c_text text-start">
                         <h3>{login}</h3>
                         <a href={html_url} className="link-dark ">Profile</a>
-                        
+
                     </div>
                 </div>
             </div>
@@ -76,7 +88,7 @@ const UseEffectBasics = () => {
     })
 
     //multiple rendering
-    if (isLoading)
+    if (loading)
         return (
             <div>
                 <h1 className='text-danger fs-2'>../useEffect();</h1>
