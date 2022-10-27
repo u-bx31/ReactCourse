@@ -5,11 +5,13 @@ import React from 'react';
 
 //----Course section----
 // import Setup from './React_course-hooks/use-State/useState';
-import Setup from './React_course-hooks/useEffect/useEffect';
+// import Setup from './React_course-hooks/useEffect/useEffect';
 // import Setup from './React_course-hooks/forms/forms';
 // import Setup from './React_course-hooks/useRef/useRef';
 // import Setup from './React_course-hooks/useReducer/useReducer';
 // import Setup from './React_course-hooks/use-Context/useContext';
+// import Setup from './React_course-hooks/propTypes';
+import Setup from './React_course-hooks/react-router';
 
 //--Projects Section --- 
 // import Project from './React-Projects/BirthReminder/container';

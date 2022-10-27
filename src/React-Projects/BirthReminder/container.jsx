@@ -10,7 +10,6 @@ const MainContainer = () => {
                     <div className='p-2'>
                         <ListUsers />
                     </div>
-
                 </div>
             </div>
         </main>
