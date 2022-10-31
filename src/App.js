@@ -11,7 +11,8 @@ import React from 'react';
 // import Setup from './React_course-hooks/useReducer/useReducer';
 // import Setup from './React_course-hooks/use-Context/useContext';
 // import Setup from './React_course-hooks/propTypes';
-import Setup from './React_course-hooks/react-router';
+// import Setup from './React_course-hooks/react-router';
+import Setup from './React_course-hooks/use-CallBack-memo_react-Memo';
 
 //--Projects Section --- 
 // import Project from './React-Projects/BirthReminder/container';
