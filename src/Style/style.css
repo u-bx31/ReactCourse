@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Roboto+Mono:ital,wght@0,500;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Catamaran:wght@400;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -154,9 +155,43 @@ body {
   font-family: "Fasthand", cursive;
 }
 
+.c-top img {
+  height: 22rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.c-bottom {
+  font-family: "Catamaran", sans-serif;
+}
+.c-bottom h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.c-bottom h3 {
+  font-size: 1.1rem;
+  padding: 0.3rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(157, 233, 252);
+}
+
+.c-mns h1 {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+}
+.c-mns .c-hr {
+  border-bottom: 3px solid white;
+  width: 5rem;
+}
+
 @media only screen and (max-width: 375px) {
   .c-img {
     width: 6rem;
     height: 6rem;
+  }
+  .c-top img {
+    height: 15rem;
   }
 }/*# sourceMappingURL=style.css.map */

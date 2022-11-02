@@ -12,25 +12,26 @@ import React from 'react';
 // import Setup from './React_course-hooks/use-Context/useContext';
 // import Setup from './React_course-hooks/propTypes';
 // import Setup from './React_course-hooks/react-router';
-import Setup from './React_course-hooks/use-CallBack-memo_react-Memo';
+// import Setup from './React_course-hooks/use-CallBack-memo_react-Memo';
 
 //--Projects Section --- 
 // import Project from './React-Projects/BirthReminder/container';
+import Project from './React-Projects/Tours';
 
 
 function App() {
-  return (
-    <div className='container bg-white p-2 p-sm-4 text-center'>
-      <Setup />
-    </div>
-  );
-
-  //----------------------
   // return (
-  //   <div className='container p-2 p-sm-4 text-center'>
-  //     <Project />
+  //   <div className='container bg-white p-2 p-sm-4 text-center'>
+  //     <Setup />
   //   </div>
   // );
+
+  //----------------------
+  return (
+    <div className='container p-2 p-sm-4 text-center'>
+      <Project />
+    </div>
+  );
 }
 
 export default App;
