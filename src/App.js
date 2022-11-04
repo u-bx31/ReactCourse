@@ -16,7 +16,9 @@ import React from 'react';
 
 //--Projects Section --- 
 // import Project from './React-Projects/BirthReminder/container';
-import Project from './React-Projects/Tours';
+// import Project from './React-Projects/Tours';
+import Project from './React-Projects/Menu';
+
 
 
 function App() {

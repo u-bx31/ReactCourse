@@ -186,6 +186,56 @@ body {
   width: 5rem;
 }
 
+.c-hr {
+  border-bottom: 3px solid rgb(255, 221, 3);
+  width: 5rem;
+}
+
+.c-menu .c-img1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 11.5rem;
+  position: relative;
+}
+.c-menu .c-img2 {
+  position: relative;
+}
+.c-menu .c-img2::before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  top: -0.4rem;
+  right: -0.2rem;
+  height: 11rem;
+  border-radius: 0 4px;
+  background-color: rgb(255, 221, 3);
+}
+.c-menu .c-btm {
+  border-bottom: 2px dotted rgb(121, 121, 121);
+}
+.c-menu .c-col-text h4 {
+  color: rgb(233, 233, 233);
+  font-size: 22px;
+  font-weight: bold;
+}
+.c-menu .c-col-text h5 {
+  font-weight: 700;
+  color: rgb(202, 152, 3);
+}
+.c-menu .c-col-text p {
+  color: rgb(233, 233, 233);
+}
+
+.c-btn {
+  margin: 20px;
+  font-size: 18px;
+  padding: 4px;
+}
+
+.nav-menu {
+  display: none;
+}
+
 @media only screen and (max-width: 375px) {
   .c-img {
     width: 6rem;
@@ -193,5 +243,11 @@ body {
   }
   .c-top img {
     height: 15rem;
+  }
+  .nav-menu {
+    display: block;
+  }
+  .c-c-btn {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

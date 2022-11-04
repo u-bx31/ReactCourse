@@ -233,6 +233,67 @@ body {
   }
 }
 
+
+//prj3
+.c-hr{
+  border-bottom: 3px solid rgb(255, 221, 3);
+  width: 5rem;
+}
+.c-menu{
+
+
+  .c-img1{
+    object-fit: cover;
+    height: 11.5rem;
+
+    position: relative;
+  }
+  .c-img2{
+    position: relative;
+  }
+  .c-img2::before {
+    content: "";
+    position:absolute;
+    width: 95%;
+    top: -.4rem;
+    right: -.2rem;
+    height: 11rem;
+    border-radius: 0 4px;
+    background-color: rgb(255, 221, 3);
+  }
+  .c-btm{
+    border-bottom:2px dotted rgb(121, 121, 121) ;
+  }
+  .c-col-text{
+    // background-color: rgb(233, 233, 233);
+    h4{
+      color: rgb(233, 233, 233);
+      font-size: 22px;
+      font-weight: bold;
+    }
+    h5{
+      font-weight: 700;
+      color: rgb(202, 152, 3);
+    }
+    p{
+      color: rgb(233, 233, 233);
+    }
+  }
+}
+.c-btn{
+  margin: 20px;
+  font-size: 18px;
+  padding: 4px ;
+  
+}
+
+.nav-menu{
+  display: none;
+
+}
+
+
+
 //all prj on small srcrens
 @media only screen and (max-width: 375px) {
   .c-img{
@@ -245,4 +306,11 @@ body {
       height: 15rem;
     }
   }
+  .nav-menu{
+    display: block;
+  }
+  .c-c-btn{
+    display: none;
+  }
+
 }

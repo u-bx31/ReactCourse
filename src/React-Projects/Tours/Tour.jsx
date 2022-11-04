@@ -8,6 +8,9 @@ const Tour = ({ Tours, handleRemove}) => {
     const handleClick = ()=>{
         setReadMore(!readMore)
     }
+    useEffect(()=>{
+        document.title = "Tours"
+    })
 
     return (
         <React.Fragment>

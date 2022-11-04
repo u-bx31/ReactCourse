@@ -3,6 +3,10 @@ import ListUsers from './list';
 
 const MainContainer = () => {
 
+    useEffect(()=>{
+        document.title = "BirthdayReminder"
+    })
+
     return (
         <main className='w-100 mx-sm-auto m-0 mt-5'>
             <div className="row py-lg-5">
