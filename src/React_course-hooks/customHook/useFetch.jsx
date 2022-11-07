@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { useCallback } from 'react';
 
 
 
@@ -7,7 +8,7 @@ export const useFetch = (url) => {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState([])
 
-    const getData = async () => {
+    const getData = useCallback(async () => {
 
         // try {
         //     const Response = await fetch(url);
@@ -30,7 +31,7 @@ export const useFetch = (url) => {
         } catch (error) {
             console.error(error);
         }
-    }
+    },[url])
 
     useEffect(() => {
         getData();

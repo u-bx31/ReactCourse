@@ -17,7 +17,8 @@ import React from 'react';
 //--Projects Section --- 
 // import Project from './React-Projects/BirthReminder/container';
 // import Project from './React-Projects/Tours';
-import Project from './React-Projects/Menu';
+// import Project from './React-Projects/Menu';
+import Project from './React-Projects/Cart';
 
 
 
@@ -29,10 +30,14 @@ function App() {
   // );
 
   //----------------------
+  // return (
+  //   <div className='container p-2 p-sm-4 text-center'>
+  //     <Project />
+  //   </div>
+  // );
+  //prjCart
   return (
-    <div className='container p-2 p-sm-4 text-center'>
-      <Project />
-    </div>
+    <Project />
   );
 }
 
