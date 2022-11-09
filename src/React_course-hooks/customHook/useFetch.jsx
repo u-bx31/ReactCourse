@@ -26,7 +26,7 @@ export const useFetch = (url) => {
             setData(response.data)
             setTimeout(() => {
                 setLoading(false);
-            }, 3000);
+            }, 2000);
 
         } catch (error) {
             console.error(error);

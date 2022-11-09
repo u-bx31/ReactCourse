@@ -294,6 +294,18 @@ body {
 }
 
 //prj4
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+
+.c-hr1 {
+  border-bottom: 3px solid #1746A2;
+  width: 10rem;
+}
+.c-hr2 {
+  border-bottom: 3px solid #1746A2;
+  width: 100%;
+}
+//navar
 .i-nav{
   width:2.5em;
   height:2.5em;
@@ -302,11 +314,8 @@ body {
 .icon{
   position: relative;
 }
-.c-p4-con{
-  background-color: rgb(240, 239, 239);
-}
 .nv-p4{
-  background-color: rgb(0, 110, 255);
+  background-color: #5F9DF7;
 }
 .amont{
   position: absolute;
@@ -321,6 +330,51 @@ body {
   font-size: 1.2rem;
   border-radius: 6rem;
 }
+
+//body container
+.c-p4-con{
+  background-color: #FAF7F0;
+  font-family: 'Josefin Sans', sans-serif;
+  h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(53, 53, 53);
+  }
+}
+
+.c-col-p4{
+  h4{
+    font-weight: 700;
+  }
+  h5{
+    color: #767474;
+  }
+}
+
+.i-c{
+  width: 1.6rem;
+  color: #5F9DF7;
+}
+.i-c:hover{
+  color: #116ffc;
+}
+
+.c-amount{
+  font-size: 1.5rem;
+
+  button{
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  span{
+    width: 2rem;
+    border-radius: 5px;
+
+  }
+}
+
 
 //all prj on small srcrens
 @media only screen and (max-width: 375px) {

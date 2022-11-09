@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { appContext } from '.';
 
 export function BiBagDashFill(props) {
     return (
@@ -13,13 +14,14 @@ export function BiBagCheckFill(props) {
   }
 
 const Navbar = () => {
+    const { state } = useContext(appContext)
     return (
         <div className='navbar navbar-dark nv-p4'>
             <div className="container my-2 px-md-5">
                 <h1 className='navbar-brand fw-bold fs-2'>UseReducer</h1>
                 <div className='icon'>
                     <BiBagDashFill />
-                    <span className="amont">1</span>
+                    <span className="amont">{state.amount}</span>
                 </div>
             </div>
         </div>
