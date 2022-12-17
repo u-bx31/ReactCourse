@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { appContext } from '.';
 import Item from './item';
 
@@ -10,6 +11,7 @@ const Items = () => {
     if (state.items.length === 0) {
         return (
             <div className='container c-p4-con min-vh-100 text-center py-5  px-0'>
+                <Link to={'/projects'} className='btn btn-outline-primary mb-4'>{`<-- Back to Projects`}</Link>
                 <h1 className='m-0'>Your Bag </h1>
                 <div className='c-hr1 mx-auto'></div>
                 <div className="row row-cols-1 mx-auto mt-5">
@@ -29,6 +31,7 @@ const Items = () => {
     else {
         return (
             <div className='container c-p4-con min-vh-100 text-center py-5  px-0'>
+                <Link to={'/projects'} className='btn btn-outline-primary mb-4'>{`<-- Back to Projects`}</Link>
                 <h1 className='m-0'>Your Bag </h1>
                 <div className='c-hr1 mx-auto'></div>
                 <div className="row row-cols-1 mx-auto mt-5">

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { useFetch } from '../customHook/useFetch';
 
 
@@ -52,9 +54,9 @@ const UseEffectBasics = () => {
     // }
 
     //-----------using custom Hook---------------
-    
-    const {loading,data} = useFetch(url)
-    const getUsers = ()=>{
+
+    const { loading, data } = useFetch(url)
+    const getUsers = () => {
         setUsers(data)
     }
     //normal effect
@@ -64,71 +66,50 @@ const UseEffectBasics = () => {
     // },[])
 
     //--for Custom Hook
-    useEffect(() => {  
+    useEffect(() => {
         getUsers();
-        document.title = "useEffect"
     })
 
 
 
-    const usersList = users.map((user) => {
-        const { login, id, node_id, avatar_url, html_url } = user
-        return (
-            <div className="col p-3 rounder-3 bg-light " key={node_id}>
-                <div className="d-flex w-100 flex-column flex-md-row ">
-                    <div className="c_img"><img src={avatar_url} className='c_img1 rounded-5' alt="" /></div>
-                    <div className="c_text text-start">
-                        <h3>{login}</h3>
-                        <a href={html_url} className="link-dark ">Profile</a>
-
-                    </div>
-                </div>
-            </div>
-        )
-    })
 
     //multiple rendering
-    if (loading)
-        return (
-            <div>
-                <h1 className='text-danger fs-2'>../useEffect();</h1>
-                <h1 className='text-start'>Exmaple 1 basics:</h1>
-                <h1> counter : {value}</h1>
-                <button className='btn btn-primary' onClick={() => setValue(value + 1)}>click</button>
-                <hr />
+    return (
+        <div className='container bg-white '>
+            <Helmet>
+                <title>React Course | UseEffect</title>
+            </Helmet>
+            <Link to='/course' className='btn btn-outline-dark mt-3'>{`<-- back`}</Link>
+            <h1 className='text-danger fs-2'>./useEffect();</h1>
+            <h1 className='text-start'>Basics: Exmaple 1 </h1>
+            <h2> counter : {value}</h2>
+            <button className='btn btn-primary' onClick={() => setValue(value + 1)}>click</button>
+            <hr />
 
-                <h1 className='text-start'>Clean-up:</h1>
-                <h1>window</h1>
-                <h2>{size} px</h2>
-                <hr />
+            <h2 className='text-start'>Clean-up : checkout event listiners 'f12'</h2>
+            <h3>window width : {size} px</h3>
+            <hr />
 
-                <h1 className="text-start">Fetch Data</h1>
-                <div className="row gap-4 justify-content-center mt-4 px-sm-4">
-                    <h1>Loading . . . </h1>
-                </div>
+            <h1 className="text-start">Fetch Data</h1>
+            <div className="row gap-4 justify-content-center mt-4 px-sm-4">
+                {loading ? <h1>Loading . . . </h1> : users.map((user) => {
+                    const { login, id, node_id, avatar_url, html_url } = user
+                    return (
+                        <div className="col p-3 rounder-3 bg-light " key={node_id}>
+                            <div className="d-flex w-100 flex-column flex-md-row ">
+                                <div className="c_img"><img src={avatar_url} className='c_img1 rounded-5' alt="" /></div>
+                                <div className="c_text text-start">
+                                    <h3>{login}</h3>
+                                    <a href={html_url} className="link-dark ">Profile</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
-        );
-    else {
-        return (
-            <div>
-                <h1 className='text-danger fs-2'>../useEffect();</h1>
-                <h1 className='text-start'>Exmaple 1 basics:</h1>
-                <h1> counter : {value}</h1>
-                <button className='btn btn-primary' onClick={() => setValue(value + 1)}>click</button>
-                <hr />
-
-                <h1 className='text-start'>Clean-up:</h1>
-                <h1>window</h1>
-                <h2>{size} px</h2>
-                <hr />
-
-                <h1 className="text-start">Fetch Data</h1>
-                <div className="row gap-4 justify-content-center mt-4 px-sm-4">
-                    {usersList}
-                </div>
-            </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default UseEffectBasics;

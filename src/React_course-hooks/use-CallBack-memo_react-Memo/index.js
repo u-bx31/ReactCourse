@@ -1,4 +1,6 @@
 import React, { useState, useEffect, createContext, useCallback, useMemo } from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { useFetch } from '../customHook/useFetch'
 import Products from './Products';
 
@@ -35,15 +37,16 @@ const Index = () => {
 
 
     const { data } = useFetch(url)
-    useEffect(()=>{
-        document.title = 'Products List'
-    })
 
     const mstexp = useMemo(()=>mostExpensive(data),[data])
 
     return (
-        <React.Fragment>
+        <div className='container bg-white'>
+            <Helmet>
+                    <title>React Course | UseCallBack-UseMemo</title>
+                </Helmet>
             <ProductData.Provider value={{data , IncrementCart}}>
+            <Link to='/course' className='btn btn-outline-dark  mt-3'>{`<-- back`}</Link>
                 <main>
                     <section className="py-5 text-center container">
                         <div className="row">
@@ -67,7 +70,7 @@ const Index = () => {
 
                 </main>
             </ProductData.Provider>
-        </React.Fragment>
+        </div>
     );
 }
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 const Persone = {
@@ -9,6 +8,9 @@ const Persone = {
 }
 
 const FormsController = () => {
+
+
+
     const [people, setPeople] = useState([]);
     const [persone, setPersone] = useState(Persone)
 
@@ -32,13 +34,15 @@ const FormsController = () => {
         }
     }
 
+    useEffect(() => {
+        document.title = "Forms"
+
+    }, [])
+
     const { userName, email, age } = persone;
     return (
         <div className='container bg-white min-vh-100'>
-            <Helmet>
-                <title>React Course | Froms</title>
-            </Helmet>
-            <Link to='/course' className='btn btn-outline-dark  mt-3'>{`<-- back`}</Link>
+            <Link to='/' className='btn btn-outline-dark  mt-3'>{`<-- back`}</Link>
             <div className="w-75 w-100  m-0 m-md-auto  p-2 p-sm-5 rounded-2 text-center">
                 <form>
                     <div className="mb-3 d-flex flex-sm-row flex-column align-items-center">

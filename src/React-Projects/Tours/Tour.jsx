@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { useCallback } from 'react';
+import React, { useState } from 'react';
 
 const Tour = ({ Tours, handleRemove}) => {
     const [readMore,setReadMore] = useState(false)
@@ -8,9 +7,6 @@ const Tour = ({ Tours, handleRemove}) => {
     const handleClick = ()=>{
         setReadMore(!readMore)
     }
-    useEffect(()=>{
-        document.title = "Tours"
-    })
 
     return (
         <React.Fragment>

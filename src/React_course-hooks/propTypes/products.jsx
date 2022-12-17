@@ -34,7 +34,7 @@ const Products = ({id,name,image,price}) => {
                 <div className="col-lg-6 col-md-8 my-2 col mx-sm-auto bg-white c-cont rounded-2 p-0 ">
                     <img src={image.url || image} className="c-img1 w-100 rounded-top" alt="" />
                     <h4 className='m-3'>{name}</h4>
-                    <p className='text-secondary'>$ {price }</p>
+                    <p className='text-secondary m-4'>$ {price }</p>
                 </div>
             </div>
         </>

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 // Array
 const data = [
@@ -59,14 +61,13 @@ const UseStateBasics = () => {
         </div>)
     })
 
-    //changeTitle
-    useEffect(()=>{
-        document.title = "useState"
-        
-    },[])
 
     return (
-        <div>
+        <div className='container bg-white '>
+            <Helmet>
+                <title>React Course | UseState</title>
+            </Helmet>
+            <Link to='/course' className='btn btn-outline-dark  mt-3'>{`<-- back`}</Link>
             <h1 className='text-danger'> ../useState</h1>
             <h1 className='text-start'>/ change Title</h1>
             <h2 className='m-3'>{title}</h2>

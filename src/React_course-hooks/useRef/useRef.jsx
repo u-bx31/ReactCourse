@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 
 //does not trigger re-render
@@ -17,14 +19,18 @@ const UseRefBasics = () => {
     }
 
     return (
-        <div>
-            <h1 className='text-danger mb-3'>.../useRef</h1>
-            <form>
+        <div className='container bg-white p-5 '>
+            <Helmet>
+                <title>React Course | UseRef</title>
+            </Helmet>
+            <Link to='/course' className='btn btn-outline-dark  mt-3'>{`<-- back`}</Link>
+            <h1 className='text-danger mb-3'>.../useRef : <q>check out console</q></h1>
+            <form className='text-center'>
                 <div className="mb-3 d-flex flex-sm-row flex-column align-items-center" >
                     <label htmlFor="email" className="text-start w-50  ">Email : </label>
                     <input type="email" className="form-control " id="email" name='email' ref={refContainer} aria-describedby="emailHelp" />
                 </div>
-                <button type="submit" className="btn btn-primary w-75" ref={divContainer} onClick={handleSubmit}>Submit</button>
+                <button type="submit" className="btn btn-primary w-50" ref={divContainer} onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     );

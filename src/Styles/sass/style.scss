@@ -74,6 +74,34 @@ body {
     background-position: 500px 0;
   }
 }
+.c-nav{
+  a{
+    text-decoration: none;
+    color: #FAF7F0;
+  }
+  &_link{
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #fff;
+      height: 2px;
+      width: 100%;
+      transition: transform 300ms ease-in-out;
+      transform: scaleX(0);
+    }
+    &:hover{
+      color:#767474;
+    }
+    &:hover::after{
+      transform: scaleX(1);
+    }
+  }
+}
+
+
 //----------------------------------
 .card {
   position: relative;

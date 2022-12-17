@@ -1,4 +1,6 @@
 import React, { useState, useReducer, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import Toast from './toast';
 
 const reducer = (state, action) => {
@@ -68,14 +70,14 @@ const UseReducerBasics = () => {
         dispatch({type : "REMOVE_ITEM" , payload : {id}})
     }
 
-    useEffect(() => {
-        document.title = "useReducer"
-
-    }, [])
 
     return (
         <div className='w-75 m-0 m-md-auto bg-light p-2 p-sm-5 rounded-2'>
+            <Helmet>
+                <title>React Course | UseReducer</title>
+            </Helmet>
             {state.showToast && <Toast toastMessage={state.toastMessage} closeToast={closeToast} />}
+            <Link to='/course' className='btn btn-outline-dark  mt-3'>{`<-- back`}</Link>
             <h1>List Of Users</h1>
             <hr />
             <div className="mb-3 d-flex flex-sm-row flex-column align-items-center">

@@ -22,11 +22,13 @@ function OffCanvasExample({ name, data, filterItem, ...props }) {
 
                 </Offcanvas.Header>
                 <Offcanvas.Body >
+                    
                     <div className="row row-cols-1 text-center ">
+
                         {data.map((c) => {
                             return (
                                 <div className='col my-2'>
-                                    <button className='btn border-0 bg-transparent fs-3' onClick={() => { return(filterItem(c)) }}>{c}</button>
+                                    <button className='btn border-0 bg-transparent fs-3' onClick={() => { return (filterItem(c)) }}>{c}</button>
                                     <hr />
                                 </div>
                             )

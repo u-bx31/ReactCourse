@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Data from './data';
 
 const ListUsers = () => {
@@ -31,6 +32,8 @@ const ListUsers = () => {
                 )
             })}
             <button type="button" class="btn btn-outline-primary w-75" onClick={handelClick}>Clear All</button>
+            <Link to={'/projects'} class="btn btn-outline-dark w-75 mt-2">Back to Projects</Link>
+
         </div>
 
     );

@@ -1,6 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Book from './book'
-
+import Navbar from './navbar'
 
 const books = [
     {
@@ -8,7 +9,7 @@ const books = [
         title: 'Rich Dad Poor Dad',
         author: 'Robert T. Kiyosaki',
         image: 'https://kbimages1-a.akamaihd.net/ddf8d53d-7df5-4560-8fbd-43915f4f6a03/353/569/90/False/rich-dad-poor-dad-24.jpg',
-        discription :`The #1 personal finance book of all time... translated into dozens of languages and sold around the world.
+        discription: `The #1 personal finance book of all time... translated into dozens of languages and sold around the world.
 
         Rich Dad Poor Dad is Robert's story of growing up with two dads - his real father and the father of his best friend, his rich dad - and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you. 
         
@@ -34,7 +35,7 @@ const books = [
         title: 'Devotion: An Epic Story of Heroism, Friendship, and Sacrifice ',
         author: 'Adam Makos',
         image: 'https://m.media-amazon.com/images/I/51OZ95hD4dL._SX322_BO1,204,203,200_.jpg',
-        discription :`Devotion tells the inspirational story of the U.S. Navy’s most famous aviation duo, Lieutenant Tom Hudner and Ensign Jesse Brown, and the Marines they fought to defend. A white New Englander from the country-club scene, Tom passed up Harvard to fly fighters for his country. An African American sharecropper’s son from Mississippi, Jesse became the navy’s first Black carrier pilot, defending a nation that wouldn’t even serve him in a bar.
+        discription: `Devotion tells the inspirational story of the U.S. Navy’s most famous aviation duo, Lieutenant Tom Hudner and Ensign Jesse Brown, and the Marines they fought to defend. A white New Englander from the country-club scene, Tom passed up Harvard to fly fighters for his country. An African American sharecropper’s son from Mississippi, Jesse became the navy’s first Black carrier pilot, defending a nation that wouldn’t even serve him in a bar.
 
         While much of America remained divided by segregation, Jesse and Tom joined forces as wingmen in Fighter Squadron 32. Adam Makos takes us into the cockpit as these bold young aviators cut their teeth at the world’s most dangerous job—landing on the deck of an aircraft carrier—a line of work that Jesse’s young wife, Daisy, struggles to accept.
         
@@ -47,7 +48,7 @@ const books = [
         title: 'The 48 Laws of Power ',
         author: 'Robert T. Kiyosaki',
         image: 'https://m.media-amazon.com/images/I/41KY-NORo9L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
-        discription :`In the book that People magazine proclaimed “beguiling” and “fascinating,” Robert Greene and Joost Elffers have distilled three thousand years of the history of power into 48 essential laws by drawing from the philosophies of Machiavelli, Sun Tzu, and Carl Von Clausewitz and also from the lives of figures ranging from Henry Kissinger to P.T. Barnum.
+        discription: `In the book that People magazine proclaimed “beguiling” and “fascinating,” Robert Greene and Joost Elffers have distilled three thousand years of the history of power into 48 essential laws by drawing from the philosophies of Machiavelli, Sun Tzu, and Carl Von Clausewitz and also from the lives of figures ranging from Henry Kissinger to P.T. Barnum.
  
         Some laws teach the need for prudence (“Law 1: Never Outshine the Master”), others teach the value of confidence (“Law 28: Enter Action with Boldness”), and many recommend absolute self-preservation (“Law 15: Crush Your Enemy Totally”). Every law, though, has one thing in common: an interest in total domination. In a bold and arresting two-color package, The 48 Laws of Power is ideal whether your aim is conquest, self-defense, or simply to understand the rules of the game.`
     },
@@ -56,7 +57,7 @@ const books = [
         title: 'Think and Grow Rich: The Landmark Bestseller Now Revised and Updated for the 21st Century (Think and Grow Rich Series)',
         author: 'Napoleon Hill',
         image: 'https://m.media-amazon.com/images/I/51bhhK6yobL._SX331_BO1,204,203,200_.jpg',
-        discription : `Think and Grow Rich has been called the "Granddaddy of All Motivational Literature." It was the first book to boldly ask, "What makes a winner?" The man who asked and listened for the answer, Napoleon Hill, is now counted in the top ranks of the world's winners himself.
+        discription: `Think and Grow Rich has been called the "Granddaddy of All Motivational Literature." It was the first book to boldly ask, "What makes a winner?" The man who asked and listened for the answer, Napoleon Hill, is now counted in the top ranks of the world's winners himself.
         The most famous of all teachers of success spent "a fortune and the better part of a lifetime of effort" to produce the "Law of Success" philosophy that forms the basis of his books and that is so powerfully summarized in this one.
         
         In the original Think and Grow Rich, published in 1937, Hill draws on stories of Andrew Carnegie, Thomas Edison, Henry Ford, and other millionaires of his generation to illustrate his principles. In the updated version, Arthur R. Pell, Ph.D., a nationally known author, lecturer, and consultant in human resources management and an expert in applying Hill's thought, deftly interweaves anecdotes of how contemporary millionaires and billionaires, such as Bill Gates, Mary Kay Ash, Dave Thomas, and Sir John Templeton, achieved their wealth. Outmoded or arcane terminology and examples are faithfully refreshed to preclude any stumbling blocks to a new generation of readers.`
@@ -66,16 +67,23 @@ const books = [
 
 const BookList = () => {
     return (
-        <main className='p-4 text-center container bg-white'>
-            <div className="row row-cols-xl-4 row-cols-1 row-cols-sm-3 gap-5 justify-content-center">
-                {books.map((book, index) => {
-                    return (
-                        <Book key={book.id} books={book} />
-                    )
-                })}
-            </div>
+        <>
+            <Helmet>
+                <title>React Projects | Book Library </title>
+            </Helmet>
+            <header><Navbar /></header>
+            <main className='p-4 text-center container bg-white'>
+                <div className="row row-cols-xl-4 row-cols-1 row-cols-sm-3 gap-5 justify-content-center">
+                    {books.map((book, index) => {
+                        return (
+                            <Book key={book.id} books={book} />
+                        )
+                    })}
+                </div>
 
-        </main>
+            </main>
+        </>
+
     );
 }
 

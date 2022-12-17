@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
 
 const Menu = ({ data }) => {
-
     return (
         data.map((c) => {
             const { id, title, price, img, desc } = c
@@ -15,7 +12,7 @@ const Menu = ({ data }) => {
                         <div className='col c-col-text mx-2 rounded-2 p-sm-3 p-2'>
                             <div className="d-flex justify-content-between c-btm align-items-center">
                                 <h4>{title}</h4>
-                                <h5>{price}</h5>
+                                <h5>{price}$</h5>
                             </div>
                             <p className='text-start'>{desc}</p>
                         </div>
