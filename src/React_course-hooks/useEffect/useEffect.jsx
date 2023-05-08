@@ -10,11 +10,6 @@ const UseEffectBasics = () => {
     //useEffect show only when initial render
     useEffect(() => {
         if (value > 0) {
-            document.title = `counter with 2nd arg : ${value}`
-        }
-    }, [])
-    useEffect(() => {
-        if (value > 0) {
             document.title = `counter : ${value}`
         }
     })
@@ -93,7 +88,7 @@ const UseEffectBasics = () => {
             <h1 className="text-start">Fetch Data</h1>
             <div className="row gap-4 justify-content-center mt-4 px-sm-4">
                 {loading ? <h1>Loading . . . </h1> : users.map((user) => {
-                    const { login, id, node_id, avatar_url, html_url } = user
+                    const { login, node_id, avatar_url, html_url } = user
                     return (
                         <div className="col p-3 rounder-3 bg-light " key={node_id}>
                             <div className="d-flex w-100 flex-column flex-md-row ">

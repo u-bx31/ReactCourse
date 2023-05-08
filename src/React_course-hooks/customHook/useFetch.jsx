@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useCallback } from 'react';
 
 
@@ -27,10 +28,10 @@ export const useFetch = (url) => {
             setTimeout(() => {
                 setLoading(false);
             }, 2000);
-
         } catch (error) {
             console.error(error);
         }
+
     },[url])
 
     useEffect(() => {
